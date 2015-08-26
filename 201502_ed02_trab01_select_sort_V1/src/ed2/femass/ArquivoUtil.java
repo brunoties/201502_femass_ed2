@@ -3,6 +3,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 
 public class ArquivoUtil {
@@ -21,8 +22,8 @@ public class ArquivoUtil {
 		
 		this.arquivo = new File(CAMINHO_ARQUIVO + File.separator + NOME_ARQUIVO);
 		
-//		if(!this.arquivo.exists()) {
-//			
+		if (!this.arquivo.exists()) {
+	
 			try {
 				
 				this.arquivo.createNewFile();
@@ -33,7 +34,7 @@ public class ArquivoUtil {
 						+ " no diretório " + CAMINHO_ARQUIVO + "!");
 				
 				e.printStackTrace();
-//			}
+			}
 		}
 	}
 	
@@ -76,6 +77,34 @@ public class ArquivoUtil {
 			
 			e.printStackTrace();
 		}
+	}
+	
+	public String leArquivo() throws IOException {
+		
+		Scanner leitor = new Scanner(this.arquivo);
+		
+		String vetorTexto = "";
+		
+		while(leitor.hasNextLine()) {
+			vetorTexto += leitor.nextLine();
+		}
+		
+		leitor.close();
+		
+		return vetorTexto;
+	}
+	
+	public int[] importaVetor(String texto) throws IOException {
+				
+		String [] vetorTexto = texto.split(" ");
+		
+		int[] vetor = new int[vetorTexto.length];
+		
+		for(int i = 0; i < vetor.length; i++) {
+			vetor[i] = Integer.parseInt(vetorTexto[i]);
+		}
+		
+		return vetor;
 	}
 
 
