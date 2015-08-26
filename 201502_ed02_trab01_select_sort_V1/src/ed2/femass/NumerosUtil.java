@@ -15,14 +15,26 @@ public class NumerosUtil {
 		return vetor;
 	}
 
-	public static void exibeVetor(int[] vetor) {
+	public static String vetorModoTexto(int[] vetor) {
+		
+		String vetorTexto = "";
+		
 		for (int i = 0; i < vetor.length; i++) {
-			System.out.print(vetor[i] + " ");
+			
+			vetorTexto += String.valueOf(vetor[i]) + " ";
+			
 			if(String.valueOf(i).endsWith("9")) {
-				System.out.println();
+				
+				vetorTexto += " \r\n";
+				
 			}
 		}
-		System.out.println();
+		
+		return vetorTexto;
+	}
+	
+	public static String[] vetorModoTextoComQuebraDeLinha(String vetorTexto) {		
+		return vetorTexto.split(" \r\n");	
 	}
 	
 	public static int[] ordenaVetor(int[] vetor) {

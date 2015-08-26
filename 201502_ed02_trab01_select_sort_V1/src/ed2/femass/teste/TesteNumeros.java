@@ -1,16 +1,18 @@
-package ed2.femass;
+package ed2.femass.teste;
+
+import ed2.femass.NumerosUtil;
 
 public class TesteNumeros {
 	
 	public static void main(String[] args) {
 		
-		int[] vetor = NumerosUtil.geraVetorComNumerosAleatorios(10);
+		int[] vetor = NumerosUtil.geraVetorComNumerosAleatorios(100);
 		
-		NumerosUtil.exibeVetor(vetor);
+		System.out.println(NumerosUtil.vetorModoTexto(vetor));
 		
 		vetor = NumerosUtil.ordenaVetor(vetor);
 		
-		NumerosUtil.exibeVetor(vetor);
+		NumerosUtil.vetorModoTexto(vetor);
 		
 //		NumerosUtil.exibeVetor(
 //				NumerosUtil.ordenaVetor(
