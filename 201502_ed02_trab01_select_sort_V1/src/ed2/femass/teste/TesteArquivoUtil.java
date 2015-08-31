@@ -23,7 +23,7 @@ public class TesteArquivoUtil {
 		
 		System.out.println(NumerosUtil.vetorModoTexto(vetor));
 		
-		vetor = NumerosUtil.selectionSortOrdenaVetor(vetor);
+		vetor = NumerosUtil.selectionSort(vetor);
 		
 		System.out.println("Vetor depois de ser ordenado");
 		

@@ -10,9 +10,13 @@ public class TesteNumeros {
 		
 		System.out.println(NumerosUtil.vetorModoTexto(vetor));
 		
-//		vetor = NumerosUtil.selectionSortOrdenaVetor(vetor);
-		
-		vetor = NumerosUtil.bubbleSortOrdenaVetor(vetor);
+//		vetor = NumerosUtil.selectionSort(vetor);
+//		
+//		vetor = NumerosUtil.bubbleSort(vetor);
+//		
+//		vetor = NumerosUtil.bubbleSortOtmizado(vetor);
+//		
+//		vetor = NumerosUtil.insertionSort(vetor);
 		
 		System.out.println(NumerosUtil.vetorModoTexto(vetor) );
 		
