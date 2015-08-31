@@ -11,29 +11,28 @@ public class TesteArquivoUtil {
 		
 		ArquivoUtil arquivoUtil = new ArquivoUtil();
 		
-
 		/* 
 		 * 
 		 * PRIMEIRA PARTE
 		 * 
 		 * */
 		
-//		int[] vetor = NumerosUtil.geraVetorComNumerosAleatorios(1000);
-//		
-//		System.out.println("Vetor que acabou de ser gerado");
-//		
-//		System.out.println(NumerosUtil.vetorModoTexto(vetor));
-//		
-//		vetor = NumerosUtil.ordenaVetor(vetor);
-//		
-//		System.out.println("Vetor depois de ser ordenado");
-//		
-//		System.out.println(NumerosUtil.vetorModoTexto(vetor));
-//		
-//		String[] vetorTexto = NumerosUtil.vetorModoTextoComQuebraDeLinha(
-//				NumerosUtil.vetorModoTexto(vetor) );
-//		
-//		arquivoUtil.escreve(vetorTexto);
+		int[] vetor = NumerosUtil.geraVetorComNumerosAleatorios(1000);
+		
+		System.out.println("Vetor que acabou de ser gerado");
+		
+		System.out.println(NumerosUtil.vetorModoTexto(vetor));
+		
+		vetor = NumerosUtil.selectionSortOrdenaVetor(vetor);
+		
+		System.out.println("Vetor depois de ser ordenado");
+		
+		System.out.println(NumerosUtil.vetorModoTexto(vetor));
+		
+		String[] vetorTexto = NumerosUtil.vetorModoTextoComQuebraDeLinha(
+				NumerosUtil.vetorModoTexto(vetor) );
+		
+		arquivoUtil.escreve(vetorTexto);
 		
 		/* 
 		 * 
@@ -41,16 +40,18 @@ public class TesteArquivoUtil {
 		 * 
 		 * */
 		
-		int[] vetor = null;
+		@SuppressWarnings("unused")
+		int[] vetor2 = null;
 		
 		try {
-			vetor = arquivoUtil.importaVetor(arquivoUtil.leArquivo());
+			vetor2 = arquivoUtil.importaVetor(arquivoUtil.leArquivo());
 		} catch (IOException e) {
 			System.out.println("Falha ao abrir o arquivo para leitura!");
 			e.printStackTrace();
 		}
 		
 		System.out.println(NumerosUtil.vetorModoTexto(vetor));
+		
 		
 	}
 

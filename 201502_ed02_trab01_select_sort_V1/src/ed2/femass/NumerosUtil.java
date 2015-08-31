@@ -37,7 +37,7 @@ public class NumerosUtil {
 		return vetorTexto.split(" \r\n");	
 	}
 	
-	public static int[] ordenaVetor(int[] vetor) {
+	public static int[] selectionSortOrdenaVetor(int[] vetor) {
 		
 		int aux = 0;
 		
@@ -59,6 +59,35 @@ public class NumerosUtil {
 			
 		}
 		
+		return vetor;
+	}
+	
+	public static int[] bubbleSortOrdenaVetor(int[] vetor) {
+		
+		int aux = 0;
+		
+		for(int i = vetor.length - 1; i >= 0; i--) {
+			
+			for(int j = 0; j < i; j++) {
+				
+				if(vetor[j] > vetor[j + 1]) {
+					
+					aux = vetor[j];
+					
+					vetor[j] = vetor[j + 1];
+					
+					vetor[j + 1] = aux;
+					
+				}
+				
+			}
+			
+		}
+		
+		return vetor;
+	}
+	
+	public static int[] bubbleSortOtmizadoOrdenaVetor(int[] vetor) {
 		return vetor;
 	}
 

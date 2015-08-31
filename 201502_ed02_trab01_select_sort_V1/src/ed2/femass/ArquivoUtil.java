@@ -5,10 +5,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-
 public class ArquivoUtil {
 	
-	private final String CAMINHO_ARQUIVO = "C:\\Users\\Bruno\\Desktop";
+	private final String CAMINHO_ARQUIVO = "C:\\Users\\Bruno\\Desktop\\vetor_numeros.txt";
 	
 	private final String NOME_ARQUIVO = "vetor_numeros.txt";
 	
@@ -20,7 +19,7 @@ public class ArquivoUtil {
 	
 	private void criaArquivo() {
 		
-		this.arquivo = new File(CAMINHO_ARQUIVO + File.separator + NOME_ARQUIVO);
+		this.arquivo = new File(CAMINHO_ARQUIVO);
 		
 		if (!this.arquivo.exists()) {
 	
@@ -38,25 +37,6 @@ public class ArquivoUtil {
 		}
 	}
 	
-	public void escreve(String texto) {
-				
-		try {
-			
-			BufferedWriter escritor = new BufferedWriter(new FileWriter(this.arquivo));
-			
-			escritor.write(texto);
-			
-			escritor.close();
-		
-		} catch (IOException e) {
-			
-			System.out.println("Falha ao abrir o arquivo " + this.NOME_ARQUIVO
-					+ " no diretório " + CAMINHO_ARQUIVO + " para escrita!");
-			
-			e.printStackTrace();
-		}
-	}
-	
 	public void escreve(String[] texto) {
 		
 		try {
@@ -64,7 +44,9 @@ public class ArquivoUtil {
 			BufferedWriter escritor = new BufferedWriter(new FileWriter(this.arquivo));
 			
 			for(int i = 0; i < texto.length; i++) {
+				
 				escritor.write(texto[i]);
+				
 				escritor.newLine();
 			}
 			
@@ -106,6 +88,25 @@ public class ArquivoUtil {
 		
 		return vetor;
 	}
+	
+//	public void escreve(String texto) {
+//	
+//try {
+//
+//BufferedWriter escritor = new BufferedWriter(new FileWriter(this.arquivo));
+//
+//escritor.write(texto);
+//
+//escritor.close();
+//
+//} catch (IOException e) {
+//
+//System.out.println("Falha ao abrir o arquivo " + this.NOME_ARQUIVO
+//		+ " no diretório " + CAMINHO_ARQUIVO + " para escrita!");
+//
+//e.printStackTrace();
+//}
+//}
 
 
 }
