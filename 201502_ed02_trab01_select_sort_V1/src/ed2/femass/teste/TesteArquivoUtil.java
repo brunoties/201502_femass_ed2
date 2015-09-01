@@ -17,22 +17,16 @@ public class TesteArquivoUtil {
 		 * 
 		 * */
 		
-		int[] vetor = NumerosUtil.geraVetorComNumerosAleatorios(1000);
-		
-		System.out.println("Vetor que acabou de ser gerado");
-		
-		System.out.println(NumerosUtil.vetorModoTexto(vetor));
-		
-		vetor = NumerosUtil.selectionSort(vetor);
-		
-		System.out.println("Vetor depois de ser ordenado");
-		
-		System.out.println(NumerosUtil.vetorModoTexto(vetor));
-		
-		String[] vetorTexto = NumerosUtil.vetorModoTextoComQuebraDeLinha(
-				NumerosUtil.vetorModoTexto(vetor) );
-		
-		arquivoUtil.escreve(vetorTexto);
+//		int[] vetor = NumerosUtil.geraVetorComNumerosAleatorios(1000);
+//		
+//		System.out.println("Vetor que acabou de ser gerado");
+//		
+//		System.out.println(NumerosUtil.vetorModoTexto(vetor));
+//				
+//		String[] vetorTexto = NumerosUtil.vetorModoTextoComQuebraDeLinha(
+//				NumerosUtil.vetorModoTexto(vetor) );
+//		
+//		arquivoUtil.escreve(vetorTexto);
 		
 		/* 
 		 * 
@@ -50,8 +44,16 @@ public class TesteArquivoUtil {
 			e.printStackTrace();
 		}
 		
-		System.out.println(NumerosUtil.vetorModoTexto(vetor));
+		vetor2 = NumerosUtil.selectionSort(vetor2);
 		
+		System.out.println("Vetor depois de ser ordenado");
+		
+		System.out.println(NumerosUtil.vetorModoTexto(vetor2));
+		
+		String[] vetorTexto2 = NumerosUtil.vetorModoTextoComQuebraDeLinha(
+				NumerosUtil.vetorModoTexto(vetor2) );
+		
+		arquivoUtil.escreve(vetorTexto2);		
 		
 	}
 
